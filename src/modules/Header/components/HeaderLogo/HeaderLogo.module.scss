@@ -1,0 +1,12 @@
+.headerLogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  background-color: var(--color-btn-dark);
+  color: var(--color-main-background);
+  font-family: "Yandex Sans", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+}

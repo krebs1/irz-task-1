@@ -1,0 +1,17 @@
+.headerLink {
+  cursor: pointer;
+  color: var(--color-text-dark);
+  font-family: "Yandex Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+  }
+}
+.headerLinkActive{
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}

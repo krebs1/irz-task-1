@@ -1,0 +1,49 @@
+.CardWrapper {
+  width: 100%;
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &_left {
+      &_titleWrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        &_title {
+          margin-right: 20px;
+          color: var(--color-text-dark);
+          font-family: "Yandex Sans", sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+        }
+
+        &_btn {
+
+        }
+      }
+
+      &_des {
+        color: var(--color-text-regular);
+        font-family: "Yandex Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+
+    &_btn {
+    }
+  }
+
+  &_photos {
+    width: 100%;
+    display: flex;
+
+    &_phohto {
+      width: 25%;
+    }
+  }
+}

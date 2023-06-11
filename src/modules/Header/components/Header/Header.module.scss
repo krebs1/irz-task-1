@@ -1,0 +1,47 @@
+.header {
+  margin-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: var(--color-block-background);
+
+  &_nav {
+    display: flex;
+    align-items: center;
+
+    &_logo {
+      margin-right: 40px;
+    }
+
+    &_link {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &_userControls {
+    display: flex;
+    align-items: center;
+
+    &_support {
+      margin-right: 15px;
+    }
+
+    &_icon {
+      margin-right: 5px;
+    }
+
+    &_avatar {
+      height: 30px;
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

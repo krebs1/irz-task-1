@@ -1,0 +1,55 @@
+.FiltersModule {
+  flex-grow: 1;
+
+  &_titleWrapper {
+    &_title {
+      margin-bottom: 10px;
+      color: var(--color-text-dark);
+      font-family: "Yandex Sans", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    &_des {
+      color: var(--color-text-regular);
+      font-family: "Yandex Sans", sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    margin-bottom: 20px;
+  }
+
+  &_cbWrapper {
+    &_title {
+      color: var(--color-text-dark);
+      font-family: "Yandex Sans", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    &_cb{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    margin-bottom: 20px;
+  }
+
+  &_selectWrapper {
+    &_title {
+      color: var(--color-text-dark);
+      font-family: "Yandex Sans", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    &_select {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}

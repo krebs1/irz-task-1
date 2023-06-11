@@ -1,0 +1,59 @@
+.SearchModule {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: var(--color-block-background);
+
+  &_searchBar {
+    margin-bottom: 30px;
+    width: 75%;
+  }
+
+  &_filters {
+    width: 100%;
+    display: flex;
+
+    &_btnsWrapper {
+      width: 75%;
+      margin-right: 30px;
+
+      &_btn {
+        margin-right: 20px;
+        width: 25%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &_filter {
+      cursor: pointer;
+      margin-right: auto;
+      display: flex;
+
+      &_icon {
+        color: var(--color-text-dark);
+        margin-right: 10px;
+        align-self: center;
+      }
+
+      &_name {
+        align-self: center;
+
+        h5 {
+          color: var(--color-text-dark);
+          font-family: "Yandex Sans", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+        }
+
+        p {
+          color: var(--color-text-light);
+          font-family: "Yandex Sans", sans-serif;
+          font-weight: 300;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
