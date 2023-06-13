@@ -26,20 +26,6 @@
         }
       }
 
-      &_designers {
-        display: flex;
-        margin-bottom: 10px;
-
-        &_avatar {
-          width: 40px;
-          margin-right: 10px;
-
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
-
       &_des {
         color: var(--color-text-regular);
         font-family: "Yandex Sans", sans-serif;

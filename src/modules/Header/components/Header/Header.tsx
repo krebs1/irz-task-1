@@ -11,16 +11,10 @@ type IHeaderProps = {
     children?: React.ReactNode | string,
     className?: string,
     style?: React.CSSProperties,
-    onTabChanged: (tab: string) => void
+    onTabChanged?: (tab: string) => void
 }
 
 const Header: React.FC<IHeaderProps> = ({children, className = '', style, onTabChanged}) => {
-    let [tab, setTab] = useState('work');
-
-    useEffect(() => {
-        onTabChanged(tab);
-    }, [tab])
-
     return (
         <header className={`${Style.header} side-padding ${className}`}
                 style={style}
@@ -28,28 +22,19 @@ const Header: React.FC<IHeaderProps> = ({children, className = '', style, onTabC
             <nav className={Style.header_nav}>
                 <HeaderLogo className={Style.header_nav_logo}>99d</HeaderLogo>
                 <HeaderLink className={Style.header_nav_link}
-                            onClick={(e) => {
-                                setTab('work')
-                            }}
-                            isActive={tab === 'work'}
+                            to={'/works'}
                 >
                     Your work
                 </HeaderLink>
                 <HeaderLink className={Style.header_nav_link}
-                            onClick={(e) => {
-                                setTab('designers')
-                            }}
-                            isActive={tab === 'designers'}
+                            to={'/designers'}
                 >
                     Your designers
                 </HeaderLink>
                 <HeaderLink className={Style.header_nav_link}
-                            onClick={(e) => {
-                                setTab('discover')
-                            }}
-                            isActive={tab === 'discover'}
+                            to={'/management'}
                 >
-                    Discover
+                    Management
                 </HeaderLink>
                 {children}
             </nav>

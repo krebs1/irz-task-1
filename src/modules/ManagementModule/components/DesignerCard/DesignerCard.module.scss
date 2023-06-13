@@ -1,0 +1,29 @@
+.DesignerCard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  //cursor: grab;
+  user-select: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: var(--color-block-background);
+  }
+
+  &_avatar {
+    margin-right: 20px;
+    width: 80px;
+  }
+
+  &_title {
+    color: var(--color-text-dark);
+    font-family: "Yandex Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+}

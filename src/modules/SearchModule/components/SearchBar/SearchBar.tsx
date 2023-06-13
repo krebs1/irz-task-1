@@ -13,8 +13,7 @@ const SearchBar: FC<ISearchBarProps> = ({className = '', style, onSubmitHandler}
         <div className={`${Style.SearchBar} ${className}`}
              style={style}
         >
-            <form action="/"
-                  onSubmit={onSubmitHandler}
+            <form onSubmit={onSubmitHandler}
                   className={Style.SearchBar_form}
             >
                 <input type="text"

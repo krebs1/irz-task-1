@@ -4,21 +4,21 @@ import Button from "../../../../UI/Button/Button";
 import Style from './SearchModule.module.scss'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFilter} from "@fortawesome/free-solid-svg-icons";
+import {useNavigate, useSearchParams} from "react-router-dom";
 
 type ISearchModuleProps = {
-    onSearchHandler: (searchQ: string) => void,
 
 }
 
-const SearchModule: FC<ISearchModuleProps> = ({onSearchHandler}) => {
-
+const SearchModule: FC<ISearchModuleProps> = ({}) => {
+    const nav = useNavigate();
 
     const submitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const searchInput = e.currentTarget.query;
         const searchBarValue = searchInput.value;
         searchInput.value = '';
-        onSearchHandler(searchBarValue);
+        nav(`?q=${searchBarValue}`);
     }
 
     return (

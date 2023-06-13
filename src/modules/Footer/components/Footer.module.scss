@@ -1,0 +1,33 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-block-background);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--color-text-regular);
+  font-family: "Yandex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+
+  &_left {
+    &_link {
+      margin-right: 30px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &_right {
+    &_link {
+      margin-right: 30px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

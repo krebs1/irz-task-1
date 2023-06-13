@@ -1,3 +1,11 @@
+export interface IWorkDataItem{
+    id:number,
+    title: string,
+    des: string,
+    photos: Array<{alt:string, path:string}>,
+    designers: Array<number>,
+}
+
 export const WORK_DATA = [
     {
         id: 1,
@@ -20,7 +28,8 @@ export const WORK_DATA = [
                 alt: 'photo 4',
                 path: 'imgs/img_4.png'
             }
-        ]
+        ],
+        designers:[1, 3, 4]
     },
     {
         id: 2,
@@ -39,7 +48,8 @@ export const WORK_DATA = [
                 alt: 'photo 4',
                 path: 'imgs/img_4.png'
             }
-        ]
+        ],
+        designers:[1, 2]
     },
     {
         id: 3,
@@ -54,7 +64,8 @@ export const WORK_DATA = [
                 alt: 'photo 2',
                 path: 'imgs/img_2.png'
             },
-        ]
+        ],
+        designers:[1]
     },
     {
         id: 4,
@@ -69,7 +80,8 @@ export const WORK_DATA = [
                 alt: 'photo 4',
                 path: 'imgs/img_4.png'
             }
-        ]
+        ],
+        designers:[]
     },
     {
         id: 5,
@@ -92,6 +104,7 @@ export const WORK_DATA = [
                 alt: 'photo 2',
                 path: 'imgs/img_2.png'
             },
-        ]
+        ],
+        designers:[4]
     },
-]
+];

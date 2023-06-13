@@ -1,16 +1,16 @@
 import React, {FC, useContext, useEffect, useState} from 'react';
+import Style from "./ManagementModule.module.scss";
 import {WORK_DATA} from "../../../../data/WorkData";
-import Style from './WorkModule.module.scss';
-import WorkCard from "../WorkCard/WorkCard";
+import ManagementCard from "../ManagementCard/ManagementCard";
 import {IWorkDataContext, WorkDataContext} from "../../../../context/WORKDATAcontext";
 
-type IWorkModuleProps = {
+type IManagementModuleProps = {
     className?: string,
     style?: React.CSSProperties,
     searchQ: string,
 }
 
-const WorkModule: FC<IWorkModuleProps> = ({className = '', style, searchQ = ''}) => {
+const ManagementModule: FC<IManagementModuleProps> = ({className, style, searchQ}) => {
     let {workData, setWorkData} = useContext<IWorkDataContext>(WorkDataContext);
     let [data, setData] = useState(workData);
 
@@ -19,7 +19,7 @@ const WorkModule: FC<IWorkModuleProps> = ({className = '', style, searchQ = ''})
             if (searchQ !== '') {
                 let newData = workData.filter((item) => item.title.includes(searchQ));
                 setData(newData);
-            }else{
+            } else {
                 setData(workData);
             }
         },
@@ -31,13 +31,13 @@ const WorkModule: FC<IWorkModuleProps> = ({className = '', style, searchQ = ''})
             {
                 data.map((data) => {
                     return (
-                        <WorkCard title={data.title}
-                                  description={data.des}
-                                  photos={data.photos}
-                                  id={data.id}
-                                  key={data.id}
-                                  designers={data.designers}
-                                  className={Style.list_item}
+                        <ManagementCard title={data.title}
+                                        description={data.des}
+                                        photos={data.photos}
+                                        id={data.id}
+                                        designers={data.designers}
+                                        key={data.id}
+                                        className={Style.list_item}
                         />
                     );
                 })
@@ -46,4 +46,4 @@ const WorkModule: FC<IWorkModuleProps> = ({className = '', style, searchQ = ''})
     );
 };
 
-export default WorkModule;
+export default ManagementModule;

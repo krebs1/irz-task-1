@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0c9cd56-8a4b-494b-ae90-c5c040f1ceeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/imgs/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/imgs/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/imgs/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/imgs/img_4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Checkbox/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Checkbox/Checkbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/DiscoverData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/WorkData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/WorkData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Header/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Header/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Header/components/HeaderLink/HeaderLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Header/components/HeaderLink/HeaderLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/SearchModule/components/SearchBar/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SearchModule/components/SearchBar/SearchBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/SearchModule/components/SearchModule/SearchModule.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SearchModule/components/SearchModule/SearchModule.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkModule/WorkModule.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkModule/WorkModule.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +52,13 @@
     "WebServerToolWindowFactoryState": "false",
     "list.type.of.created.stylesheet": "SCSS",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\fanto\\OneDrive\\Рабочий стол\\test2\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\fanto\\OneDrive\\Рабочий стол\\irz-task\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fanto\OneDrive\Рабочий стол\irz-task\src\pages\WorkPage" />
       <recent name="C:\Users\fanto\OneDrive\Рабочий стол\test2\src\data\imgs" />
     </key>
   </component>
@@ -72,7 +73,8 @@
       <workItem from="1686312146130" duration="3115000" />
       <workItem from="1686317320372" duration="6493000" />
       <workItem from="1686385617332" duration="11067000" />
-      <workItem from="1686477950541" duration="25673000" />
+      <workItem from="1686477950541" duration="26968000" />
+      <workItem from="1686667247372" duration="16547000" />
     </task>
     <servers />
   </component>

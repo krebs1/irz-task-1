@@ -27,6 +27,7 @@ const Checkbox: FC<ICheckboxProps> = ({className, style, label, onChangeValue, v
                 <input className={Style.Checkbox_label_input}
                        type="checkbox"
                        checked={isChecked}
+                       onChange={() => {}}
                 />
                 <FontAwesomeIcon icon={isChecked ? faSquareCheck : faSquare}
                                  className={Style.Checkbox_label_Icon}
