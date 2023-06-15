@@ -7,14 +7,13 @@ import {DndProvider} from "react-dnd";
 import {HTML5Backend} from "react-dnd-html5-backend";
 
 const ManagementPage = () => {
-    let [searchParams, setSearchParams] = useSearchParams();
-    let q = searchParams.get('q');
-
     return (
         <DndProvider backend={HTML5Backend}>
             <div className={Style.ManagementPage}>
-                <DesignersList classname={Style.ManagementPage_designersList}/>
-                <ManagementModule searchQ={q ? q : ''}/>
+                <div>
+                    <DesignersList classname={Style.ManagementPage_designersList}/>
+                </div>
+                <ManagementModule/>
             </div>
         </DndProvider>
     );

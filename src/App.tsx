@@ -1,16 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './styles/index..scss';
 import AppRouter from "./router/AppRouter";
-import {WorkDataContext} from "./context/WORKDATAcontext";
-import {IWorkDataItem, WORK_DATA} from "./data/WorkData";
+import {useAppSelector} from "./hooks/reduxHooks";
 
 function App() {
-    const [workData, setWorkData] = useState<Array<IWorkDataItem>>(WORK_DATA);
+    const {} = useAppSelector(state => state.workReducer)
 
     return (
-        <WorkDataContext.Provider value={{workData, setWorkData}}>
-            <AppRouter/>
-        </WorkDataContext.Provider>
+        <AppRouter/>
     );
 }
 

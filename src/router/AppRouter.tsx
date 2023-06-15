@@ -10,6 +10,7 @@ const AppRouter = () => {
                     return(
                         <Route element={route.layout}
                                key={route.layout.key}
+
                         >
                             {
                                 route.routes.map((route)=>{

@@ -1,47 +1,57 @@
 import React, {FC, useContext, useEffect, useState} from 'react';
 import Style from "./ManagementModule.module.scss";
-import {WORK_DATA} from "../../../../data/WorkData";
 import ManagementCard from "../ManagementCard/ManagementCard";
-import {IWorkDataContext, WorkDataContext} from "../../../../context/WORKDATAcontext";
+import {useSearchParams} from "react-router-dom";
+import {useAppSelector} from "../../../../hooks/reduxHooks";
+import {IWork} from "../../../../models/IWork";
 
-type IManagementModuleProps = {
+interface IManagementModuleProps {
     className?: string,
     style?: React.CSSProperties,
-    searchQ: string,
 }
 
-const ManagementModule: FC<IManagementModuleProps> = ({className, style, searchQ}) => {
-    let {workData, setWorkData} = useContext<IWorkDataContext>(WorkDataContext);
-    let [data, setData] = useState(workData);
+const ManagementModule: FC<IManagementModuleProps> = ({className, style}) => {
+    let [searchParams, setSearchParams] = useSearchParams();
+    let q = searchParams.get('q');
+
+    const {works} = useAppSelector(state => state.workReducer);
+
+    let [data, setData] = useState<IWork[]>([]);
 
     useEffect(
         () => {
-            if (searchQ !== '') {
-                let newData = workData.filter((item) => item.title.includes(searchQ));
-                setData(newData);
+            let newData;
+            if (q === '' || q === null) {
+                newData = works;
             } else {
-                setData(workData);
+                newData = works.filter((item) => item.title.includes(q as string));
             }
+            setData(newData);
         },
-        [searchQ]
+        [q, works]
     )
 
     return (
-        <div className={`${Style.list} ${className}`}>
-            {
-                data.map((data) => {
-                    return (
-                        <ManagementCard title={data.title}
-                                        description={data.des}
-                                        photos={data.photos}
-                                        id={data.id}
-                                        designers={data.designers}
-                                        key={data.id}
-                                        className={Style.list_item}
-                        />
-                    );
-                })
-            }
+        <div className={`${Style.ManagementModule} ${className}`}
+             style={style}
+        >
+            <h4 className={Style.ManagementModule_title}>Проекты</h4>
+            <div className={Style.ManagementModule_list}>
+                {
+                    data.map((data) => {
+                        return (
+                            <ManagementCard id={data.id}
+                                            title={data.title}
+                                            description={data.des}
+                                            photos={data.photos}
+                                            designersIds={data.designers}
+                                            key={data.id}
+                                            className={Style.ManagementModule_list_item}
+                            />
+                        );
+                    })
+                }
+            </div>
         </div>
     );
 };

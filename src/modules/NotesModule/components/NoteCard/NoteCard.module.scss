@@ -1,0 +1,99 @@
+.NoteCard {
+  padding: 20px;
+  background-color: var(--color-block-background);
+  border-radius: 20px;
+
+  &:hover {
+
+  }
+
+  &_header {
+    margin-bottom: 10px;
+
+    &_titleWrapper {
+      display: flex;
+      align-items: center;
+
+      &_title {
+        color: var(--color-text-dark);
+        font-family: "Yandex Sans", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      &_editBtn {
+        cursor: pointer;
+        border: none;
+        background: none;
+        padding: 10px;
+        border-radius: 5px;
+        color: var(--color-text-dark);
+
+        &:hover {
+          background-color: var(--color-block-background);
+        }
+      }
+    }
+
+    &_editTitleWrapper {
+      display: flex;
+      align-items: center;
+
+      &_input {
+        padding: 10px;
+        border: 1px solid var(--color-text-dark);
+        border-radius: 5px;
+        background: none;
+        margin-right: 20px;
+        color: var(--color-text-dark);
+        font-family: "Yandex Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &_btn {
+
+      }
+    }
+  }
+
+  &_creatorWrapper {
+    margin-bottom: 20px;
+
+    &_title {
+      color: var(--color-text-dark);
+      font-family: "Yandex Sans", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    &_creator {
+      display: flex;
+      align-items: center;
+
+      &_avatar {
+        width: 50px;
+        margin-right: 20px;
+      }
+
+      &_name {
+        color: var(--color-text-regular);
+        font-family: "Yandex Sans", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &_actions {
+    &_deleteAction {
+
+    }
+  }
+}

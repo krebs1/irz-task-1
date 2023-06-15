@@ -11,10 +11,7 @@ const MainLayout = () => {
         <div>
             <Header className={Style.App_header}/>
             <div className={`${Style.App_mainWrapper} side-padding`}>
-                <div className={Style.App_mainWrapper_listWrapper}>
-                    <Outlet/>
-                </div>
-                <FiltersModule/>
+                <Outlet/>
             </div>
             <Footer/>
         </div>

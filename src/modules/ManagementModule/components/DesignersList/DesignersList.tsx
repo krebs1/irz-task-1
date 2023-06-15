@@ -1,25 +1,28 @@
 import React, {FC} from 'react';
-import {DESIGNER_DATA} from "../../../../data/DesignerData";
 import Style from './DesignerList.module.scss';
 import DesignerCard from "../DesignerCard/DesignerCard";
+import {useAppSelector} from "../../../../hooks/reduxHooks";
 
-type DesignersListProps = {
+interface IDesignersListProps {
     classname?: string,
     style?: React.CSSProperties,
 }
 
-const DesignersList: FC<DesignersListProps> = ({classname = '', style}) => {
+const DesignersList: FC<IDesignersListProps> = ({classname = '', style}) => {
+    const {designers} = useAppSelector(state => state.designerReducer)
+
     return (
         <div className={`${Style.DesignerList} ${classname}`} style={style}>
+            <h4 className={Style.DesignerList_title}>Пользователи</h4>
             {
-                DESIGNER_DATA.map((designer) => {
+                designers.map((designer) => {
                     let avatar = require(`../../../../data/${designer.avatar}`);
 
                     return (
                         <DesignerCard key={designer.id}
                                       src={avatar}
-                                      title={designer.title}
-                                      alt={designer.title}
+                                      title={designer.name}
+                                      alt={designer.name}
                                       id={designer.id}
                         />
                     );

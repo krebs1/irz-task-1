@@ -17,7 +17,8 @@
 
   &_avatar {
     margin-right: 20px;
-    width: 80px;
+    min-width: 60px;
+    max-width: 60px;
   }
 
   &_title {

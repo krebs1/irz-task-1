@@ -1,8 +1,8 @@
 export const DESIGNER_DATA = [
     {
         id: 1,
-        title: 'Designers title 1',
-        des: 'Designers description 1',
+        name: 'Maurice Norman',
+        about: 'UI/UX',
         avatar: 'imgs/img_1.png',
         photos: [
             {
@@ -25,8 +25,8 @@ export const DESIGNER_DATA = [
     },
     {
         id: 2,
-        title: 'Designers title 2',
-        des: 'Designers description 2',
+        name: 'Loreen Todd',
+        about: 'Frontend: React',
         avatar: 'imgs/img_2.png',
         photos: [
             {
@@ -49,8 +49,8 @@ export const DESIGNER_DATA = [
     },
     {
         id: 3,
-        title: 'Designers title 3',
-        des: 'Designers description 3',
+        name: 'Flora Matthews',
+        about: 'Backend: Laravel',
         avatar: 'imgs/img_3.png',
         photos: [
             {
@@ -69,8 +69,8 @@ export const DESIGNER_DATA = [
     },
     {
         id: 4,
-        title: 'Designers title 4',
-        des: 'Designers description 4',
+        name: 'Brent Barrett',
+        about: 'Fullstack: Vue, Laravel',
         avatar: 'imgs/img_4.png',
         photos: [
             {
@@ -89,8 +89,8 @@ export const DESIGNER_DATA = [
     },
     {
         id: 5,
-        title: 'Designers title 5',
-        des: 'Designers description 5',
+        name: 'Emil Owen',
+        about: 'Project manager',
         avatar: 'imgs/img_1.png',
         photos: [
             {

@@ -1,0 +1,28 @@
+.DesignerAvatar {
+  cursor: pointer;
+  position: relative;
+
+  &_avatar {
+
+  }
+
+  &_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-style: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.71);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_icon {
+      color: var(--color-main-background);
+    }
+  }
+}

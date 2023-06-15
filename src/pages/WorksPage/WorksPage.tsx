@@ -1,14 +1,13 @@
 import React from 'react';
-import WorkModule from "../../modules/WorkModule/components/WorkModule/WorkModule";
+import WorksModule from "../../modules/WorksModule/components/WorksModule/WorksModule";
 import {useSearchParams} from "react-router-dom";
 
 const WorksPage = () => {
-    let [searchParams, setSearchParams] = useSearchParams();
-    let q = searchParams.get('q');
+
 
     return (
         <div>
-            <WorkModule searchQ={q ? q : ''}/>
+            <WorksModule/>
         </div>
     );
 };

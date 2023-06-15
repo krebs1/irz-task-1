@@ -1,58 +1,77 @@
-import React, {FC, useContext} from 'react';
+import React, {FC} from 'react';
 import Style from "./ManagementCard.module.scss";
 import {useDrop} from "react-dnd";
 import {itemTypes} from "../../../../reactDND/types";
-import {IWorkDataContext, WorkDataContext} from "../../../../context/WORKDATAcontext";
+import {workSlice} from "../../../../store/reducers/WorkSlice";
+import {useDispatch} from "react-redux";
+import {useAppSelector} from "../../../../hooks/reduxHooks";
+import UserAvatar from "../../../../UI/UserAvatar/UserAvatar";
+import {IPhoto} from "../../../../models/IPhoto";
+import DesignerAvatar from "../../../../components/DesignerAvatar/DesignerAvatar";
 
 type IManagementCardProps = {
     className?: string,
+    id: number,
     title: string,
     description: string,
-    id: number,
-    photos: Array<{ alt: string, path: string }>,
-    designers: Array<number>,
+    photos: IPhoto[],
+    designersIds: number[],
 }
 
-const ManagementCard: FC<IManagementCardProps> = ({className, title, description, photos, id, designers}) => {
-    let {workData, setWorkData} = useContext<IWorkDataContext>(WorkDataContext);
+interface IDragItem {
+    id: number,
+}
 
-    console.log(workData[id-1].designers)
+const ManagementCard: FC<IManagementCardProps> = ({className = '', id, title, description, photos, designersIds}) => {
+    const dispatch = useDispatch();
+    const {addDesigner} = workSlice.actions;
+    const {designers} = useAppSelector(state => state.designerReducer);
 
     const [{isOver, canDrop}, drop] = useDrop(
         () => ({
             accept: itemTypes.DESIGNER,
-            drop: (item) => {
-                if (setWorkData) {
-                    console.log(workData[id].designers)
-                    setWorkData(prevState => {
-                        // @ts-ignore
-                        prevState[id-1].designers.push(item.id)
-                        return prevState
-                    });
-                }
+            drop: (item: IDragItem) => {
+                dispatch(addDesigner({workId: id, designerId: item.id}));
             },
-            canDrop: (item) => {
-                // @ts-ignore
-                return !(designers.includes(item.id));
+            canDrop: (item: IDragItem) => {
+                return !(designersIds.includes(item.id));
             },
             collect: (monitor) => ({
                 isOver: monitor.isOver(),
                 canDrop: monitor.canDrop(),
             })
         }),
-        []
+        [id, designersIds]
     )
+
 
     return (
         <div className={`${Style.CardWrapper} ${className}`}
+             style={{border: isOver ? '1px solid var(--color-text-dark)' : 'none'}}
              ref={drop}
         >
             <div className={Style.CardWrapper_header}>
-                <div className={Style.CardWrapper_header_left}>
-                    <div className={Style.CardWrapper_header_left_titleWrapper}>
-                        <h5 className={Style.CardWrapper_header_left_titleWrapper_title}>{title}</h5>
-                    </div>
-                    <p className={Style.CardWrapper_header_left_des}>{description}</p>
+                <div className={Style.CardWrapper_header_info}>
+                    <h5 className={Style.CardWrapper_header_info_title}>{title}</h5>
+                    <p className={Style.CardWrapper_header_info_des}>{description}</p>
+                </div>
+                <div className={Style.CardWrapper_header_designers}>
+                    {
+                        designers.filter((elem) => designersIds.includes(elem.id)).map((designer) => {
+                            const avatar = require(`../../../../data/${designer.avatar}`);
+
+                            return (
+                                <DesignerAvatar
+                                    classname={Style.CardWrapper_header_designers_designer}
+                                    src={avatar}
+                                    alt={designer.name}
+                                    designerId={designer.id}
+                                    workId={id}
+                                    key={`avatar${designer.id}`}
+                                />
+                            )
+                        })
+                    }
                 </div>
             </div>
             <div className={Style.CardWrapper_photos}>

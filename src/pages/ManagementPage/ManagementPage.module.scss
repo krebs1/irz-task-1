@@ -1,7 +1,11 @@
 .ManagementPage{
   display: flex;
+  height: 100%;
 
   &_designersList{
+    position: sticky;
+    top: 10px;
     margin-right: 30px;
+    border-right: 1px solid var(--color-text-dark);
   }
 }

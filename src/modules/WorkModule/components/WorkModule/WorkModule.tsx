@@ -1,47 +1,21 @@
-import React, {FC, useContext, useEffect, useState} from 'react';
-import {WORK_DATA} from "../../../../data/WorkData";
-import Style from './WorkModule.module.scss';
-import WorkCard from "../WorkCard/WorkCard";
-import {IWorkDataContext, WorkDataContext} from "../../../../context/WORKDATAcontext";
+import React from 'react';
+import DesignersList from "../DesignersList/DesignersList";
+import {useParams} from "react-router-dom";
+import {useAppSelector} from "../../../../hooks/reduxHooks";
+import PhotosList from "../PhotosList/PhotosList";
+import Style from "./WorkModule.module.scss";
 
-type IWorkModuleProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    searchQ: string,
-}
+const WorkModule = () => {
+    const {id} = useParams();
 
-const WorkModule: FC<IWorkModuleProps> = ({className = '', style, searchQ = ''}) => {
-    let {workData, setWorkData} = useContext<IWorkDataContext>(WorkDataContext);
-    let [data, setData] = useState(workData);
-
-    useEffect(
-        () => {
-            if (searchQ !== '') {
-                let newData = workData.filter((item) => item.title.includes(searchQ));
-                setData(newData);
-            }else{
-                setData(workData);
-            }
-        },
-        [searchQ]
-    )
-
+    const {works} = useAppSelector(state => state.workReducer);
+    const work = works.find(work => work.id === Number(id))!;
     return (
-        <div className={`${Style.list} ${className}`}>
-            {
-                data.map((data) => {
-                    return (
-                        <WorkCard title={data.title}
-                                  description={data.des}
-                                  photos={data.photos}
-                                  id={data.id}
-                                  key={data.id}
-                                  designers={data.designers}
-                                  className={Style.list_item}
-                        />
-                    );
-                })
-            }
+        <div className={Style.WorkModule}>
+            <h1 className={Style.WorkModule_title}>{work.title}</h1>
+            <p className={Style.WorkModule_description}>{work.des}</p>
+            <DesignersList workId={work.id}/>
+            <PhotosList photos={work.photos}/>
         </div>
     );
 };

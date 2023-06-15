@@ -20,7 +20,11 @@ const Header: React.FC<IHeaderProps> = ({children, className = '', style, onTabC
                 style={style}
         >
             <nav className={Style.header_nav}>
-                <HeaderLogo className={Style.header_nav_logo}>99d</HeaderLogo>
+                <HeaderLogo className={Style.header_nav_logo}
+                            to={'/'}
+                >
+                    99d
+                </HeaderLogo>
                 <HeaderLink className={Style.header_nav_link}
                             to={'/works'}
                 >
@@ -35,6 +39,11 @@ const Header: React.FC<IHeaderProps> = ({children, className = '', style, onTabC
                             to={'/management'}
                 >
                     Management
+                </HeaderLink>
+                <HeaderLink className={Style.header_nav_link}
+                            to={'/notes'}
+                >
+                    Notes
                 </HeaderLink>
                 {children}
             </nav>

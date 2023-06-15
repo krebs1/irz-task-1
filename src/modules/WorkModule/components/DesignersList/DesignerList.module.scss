@@ -1,0 +1,18 @@
+.DesignerList {
+  margin-bottom: 20px;
+
+  &_title {
+    margin-bottom: 10px;
+    color: var(--color-text-dark);
+    font-family: "Yandex Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

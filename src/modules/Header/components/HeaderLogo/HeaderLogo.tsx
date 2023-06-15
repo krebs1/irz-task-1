@@ -1,21 +1,24 @@
 import React, {FC} from 'react';
 import Style from "./HeaderLogo.module.scss"
+import {Link} from "react-router-dom";
 
 type IHeaderLogoProps = {
     children?: React.ReactNode | string,
     className?: string,
     style?: React.CSSProperties,
-    onClickHandler?: ()=>void,
+    onClickHandler?: () => void,
+    to: string,
 }
 
-const HeaderLogo:FC<IHeaderLogoProps> = ({children, className = '', style, onClickHandler}) => {
+const HeaderLogo: FC<IHeaderLogoProps> = ({children, className = '', style, onClickHandler, to='/'}) => {
     return (
-        <a className={`${Style.headerLogo} ${className}`}
-           style={style}
-           onClick={onClickHandler}
+        <Link className={`${Style.headerLogo} ${className}`}
+              style={style}
+              onClick={onClickHandler}
+              to={to}
         >
             {children}
-        </a>
+        </Link>
     );
 };
 

@@ -4,11 +4,13 @@ export interface IWorkDataItem{
     des: string,
     photos: Array<{alt:string, path:string}>,
     designers: Array<number>,
+    index: number,
 }
 
 export const WORK_DATA = [
     {
         id: 1,
+        index: 1,
         title: 'Work title 1',
         des: 'Work description 1',
         photos: [
@@ -33,6 +35,7 @@ export const WORK_DATA = [
     },
     {
         id: 2,
+        index: 4,
         title: 'Work title 2',
         des: 'Work description 2',
         photos: [
@@ -53,6 +56,7 @@ export const WORK_DATA = [
     },
     {
         id: 3,
+        index: 5,
         title: 'Work title 3',
         des: 'Work description 3',
         photos: [
@@ -69,6 +73,7 @@ export const WORK_DATA = [
     },
     {
         id: 4,
+        index: 3,
         title: 'Work title 4',
         des: 'Work description 4',
         photos: [
@@ -85,6 +90,7 @@ export const WORK_DATA = [
     },
     {
         id: 5,
+        index: 2,
         title: 'Work title 5',
         des: 'Work description 5',
         photos: [

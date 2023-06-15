@@ -1,9 +1,20 @@
-.list {
-  &_item {
-    margin-bottom: 30px;
+.ManagementModule {
+  &_title {
+    color: var(--color-text-dark);
+    font-family: "Yandex Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+  }
 
-    &:last-child {
-      margin-bottom: 0;
+  &_list {
+    &_item {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

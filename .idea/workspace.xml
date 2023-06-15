@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0c9cd56-8a4b-494b-ae90-c5c040f1ceeb" name="Changes" comment="">
+    <list default="true" id="f0c9cd56-8a4b-494b-ae90-c5c040f1ceeb" name="Changes" comment="Добавлен react router, footer, management page, react dnd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Checkbox/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Checkbox/Checkbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/DiscoverData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/WORKDATAcontext.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/DesignerData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DesignerData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/WorkData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/WorkData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/WithoutSearchLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/WithoutSearchLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/DesignersModule/component/DesignersModule/DesignersModule.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/DesignersModule/component/DesignersModule/DesignersModule.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/Header/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Header/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Header/components/HeaderLink/HeaderLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Header/components/HeaderLink/HeaderLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/SearchModule/components/SearchBar/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SearchModule/components/SearchBar/SearchBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/SearchModule/components/SearchModule/SearchModule.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SearchModule/components/SearchModule/SearchModule.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkModule/WorkModule.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkModule/WorkModule.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Header/components/HeaderLogo/HeaderLogo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Header/components/HeaderLogo/HeaderLogo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Header/components/HeaderLogo/HeaderLogo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Header/components/HeaderLogo/HeaderLogo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ManagementModule/components/DesignerCard/DesignerCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ManagementModule/components/DesignerCard/DesignerCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ManagementModule/components/DesignersList/DesignerList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ManagementModule/components/DesignersList/DesignerList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ManagementModule/components/DesignersList/DesignersList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ManagementModule/components/DesignersList/DesignersList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ManagementModule/components/ManagementCard/ManagementCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ManagementModule/components/ManagementCard/ManagementCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ManagementModule/components/ManagementCard/ManagementCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ManagementModule/components/ManagementCard/ManagementCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ManagementModule/components/ManagementModule/ManagementModule.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ManagementModule/components/ManagementModule/ManagementModule.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ManagementModule/components/ManagementModule/ManagementModule.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ManagementModule/components/ManagementModule/ManagementModule.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkCard/WorkCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkModule/WorkModule.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/WorkModule/components/WorkModule/WorkModule.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ManagementPage/ManagementPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ManagementPage/ManagementPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ManagementPage/ManagementPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ManagementPage/ManagementPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WorkPage/WorkPage.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WorkPage/WorkPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WorkPage/WorkPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WorksPage/WorksPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WorksPage/WorksPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reactDND/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reactDND/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/AppRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routes.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +44,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -45,19 +62,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "SCSS",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\fanto\\OneDrive\\Рабочий стол\\irz-task\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\fanto\\OneDrive\\Рабочий стол\\irz-task\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fanto\OneDrive\Рабочий стол\irz-task\src\modules\WorksModule" />
       <recent name="C:\Users\fanto\OneDrive\Рабочий стол\irz-task\src\pages\WorkPage" />
       <recent name="C:\Users\fanto\OneDrive\Рабочий стол\test2\src\data\imgs" />
     </key>
@@ -74,7 +92,10 @@
       <workItem from="1686317320372" duration="6493000" />
       <workItem from="1686385617332" duration="11067000" />
       <workItem from="1686477950541" duration="26968000" />
-      <workItem from="1686667247372" duration="16547000" />
+      <workItem from="1686667247372" duration="17043000" />
+      <workItem from="1686744194348" duration="3040000" />
+      <workItem from="1686749230672" duration="23739000" />
+      <workItem from="1686811573124" duration="23980000" />
     </task>
     <servers />
   </component>
@@ -91,5 +112,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавлен react router, footer, management page, react dnd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен react router, footer, management page, react dnd" />
   </component>
 </project>
